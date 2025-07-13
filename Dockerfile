@@ -22,4 +22,4 @@ RUN pip install --upgrade pip && pip install -r requirements.txt
 EXPOSE 10000
 
 # Start app
-CMD ["gunicorn", "-b", "0.0.0.0:10000", "app:app"]
+CMD ["gunicorn", "-w", "1", "-b", "0.0.0.0:10000", "app:app"]
